@@ -21,7 +21,7 @@ def count_moves(nums, mean):
         moves += abs(mean - num)
     return moves
 
-if(len(sys.argv) < 2):
+if(len(sys.argv) != 2):
     print('Используйте: "python task4.py <filename>.txt"')
     sys.exit(1)
     
