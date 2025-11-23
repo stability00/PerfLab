@@ -17,13 +17,13 @@ def fillInValue(tests, id, value):
         if "values" in test:
             fillInValue(test["values"], id, value)
         
-if(len(sys.argv) != 3):
-    print('Используйте: "python task3.py <file with tests> <file with values>')
+if(len(sys.argv) != 4):
+    print('Используйте: "python task3.py <file with values> <file with tests> <file with report')
     sys.exit(1)
     
-tests = (open_file(sys.argv[1]))["tests"]
-values = (open_file(sys.argv[2]))["values"]
+values = (open_file(sys.argv[1]))["values"]
+tests = (open_file(sys.argv[2]))["tests"]
 for elem in values:
     fillInValue(tests, elem["id"], elem["value"])
-with open("report.json", "w") as f:
+with open(sys.argv[3], "w") as f:
     json.dump(tests, f, indent=4, ensure_ascii=False)
