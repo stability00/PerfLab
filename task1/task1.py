@@ -18,7 +18,7 @@ def count_path(n, m):
     return answer
             
 if(len(sys.argv) != 5):
-    print('Используйте: "python task4.py <value of n1> <value of m1> <value of n2> <value of m2>')
+    print('Используйте: "python task1.py <value of n1> <value of m1> <value of n2> <value of m2>')
     sys.exit(1)
 
 n1, m1, n2, m2 = [int(item) for item in sys.argv[1:]]
